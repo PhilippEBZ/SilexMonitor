@@ -15,6 +15,53 @@
 
     
     
+    <script type="text/javascript" src="js/reconnecting-websocket.min.js"></script>
+    <script type="text/javascript">
+        var readings0 = new TimeSeries();
+          var readings1 = new TimeSeries();
+         
+          
+          function createTimeline() {
+            var chart = new SmoothieChart({
+    	        interpolation:'bezier',
+    			millisPerPixel:15,
+    			maxValueScale:1.09,
+    			minValueScale:1.14,
+    			grid:{fillStyle:'#ffffff',strokeStyle:'rgba(119,119,119,0.25)',
+    			sharpLines:true,
+    			millisPerLine:4000,
+    			verticalSections:8,
+    			borderVisible:true},
+    			labels:{fillStyle:'#000000',fontSize:14,precision:0},
+    			limitFPS:20,maxValue:1000,minValue:0
+             
+             
+            }); 
+            
+            
+            chart.addTimeSeries(readings0, { strokeStyle: 'rgba(0, 255, 0, 0.6)', fillStyle: 'rgba(0, 0, 0, 0.0)',lineWidth: 2 });
+    		chart.addTimeSeries(readings1, { strokeStyle: 'rgba(0, 0, 255, 0.2)', fillStyle: 'rgba(0, 0, 0, 0.0)',lineWidth: 2 });
+          
+            chart.streamTo(document.getElementById("chart"), 300); 
+          }
+          
+          
+          var ws = new ReconnectingWebSocket('ws://raspberrypi:8080/');
+          ws.onopen = function() {
+            document.body.style.backgroundColor = '#cfc';
+          };
+          ws.onclose = function() {
+            document.body.style.backgroundColor = null;
+          };
+          ws.onmessage = function(event) {
+            var data = event.data.split(",");
+            var AnIn = parseFloat(data[0]);  
+            var SawTooth = parseFloat(data[1])/10;
+            readings0.append(new Date().getTime(), AnIn);
+            readings1.append(new Date().getTime(), SawTooth);      
+          };
+    </script>
+    
     <script type="text/javascript" src="https://raw.githubusercontent.com/PhilippEBZ/SilexMonitor/master/reconnecting-websocket.min.js"></script>
     <script type="text/javascript" src="https://raw.githubusercontent.com/PhilippEBZ/SilexMonitor/master/smoothie.js"></script>
 
@@ -473,7 +520,7 @@
             <div data-silex-type="html" class="editable-style silex-id-1492776672785-2 html-element silex-component silex-component-map silex-use-height-not-minheight" data-silex-id="silex-id-1492776672785-2">
                 <div class="silex-element-content">
                     <div id="mapdiv_1492776672835_337">
-                        <div class="ol-viewport" data-view="653" style="position: relative; overflow: hidden; width: 100%; height: 100%; touch-action: none;"><canvas class="ol-unselectable" style="width: 100%; height: 100%; display: none;"></canvas>
+                        <div class="ol-viewport" data-view="678" style="position: relative; overflow: hidden; width: 100%; height: 100%; touch-action: none;"><canvas class="ol-unselectable" style="width: 100%; height: 100%; display: none;"></canvas>
                             <div class="ol-overlaycontainer"></div>
                             <div class="ol-overlaycontainer-stopevent">
                                 <div class="ol-zoom ol-unselectable ol-control"><button class="ol-zoom-in" type="button" title="Zoom in">+</button><button class="ol-zoom-out" type="button" title="Zoom out">−</button></div>
