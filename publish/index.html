@@ -16,6 +16,8 @@
     
     
     <script type="text/javascript" src="https://raw.githubusercontent.com/PhilippEBZ/SilexMonitor/master/reconnecting-websocket.min.js"></script>
+    <script type="text/javascript" src="https://raw.githubusercontent.com/PhilippEBZ/SilexMonitor/master/smoothie.js"></script>
+
 
     <script type="text/javascript">
         var readings0 = new TimeSeries();
@@ -61,8 +63,10 @@
             readings0.append(new Date().getTime(), AnIn);
             readings1.append(new Date().getTime(), SawTooth);      
           };
+          
+          window.onload = createTimeline;
     </script>
-    
+
     
     
 
@@ -156,6 +160,8 @@
 
 
     <script src="js/ol.js" data-silex-static="" data-dependency=""></script>
+
+
     <style id="current-page-style">
         .page-overview1 {
             display: inherit;
@@ -467,7 +473,7 @@
             <div data-silex-type="html" class="editable-style silex-id-1492776672785-2 html-element silex-component silex-component-map silex-use-height-not-minheight" data-silex-id="silex-id-1492776672785-2">
                 <div class="silex-element-content">
                     <div id="mapdiv_1492776672835_337">
-                        <div class="ol-viewport" data-view="6209" style="position: relative; overflow: hidden; width: 100%; height: 100%; touch-action: none;"><canvas class="ol-unselectable" style="width: 100%; height: 100%; display: none;"></canvas>
+                        <div class="ol-viewport" data-view="628" style="position: relative; overflow: hidden; width: 100%; height: 100%; touch-action: none;"><canvas class="ol-unselectable" style="width: 100%; height: 100%; display: none;"></canvas>
                             <div class="ol-overlaycontainer"></div>
                             <div class="ol-overlaycontainer-stopevent">
                                 <div class="ol-zoom ol-unselectable ol-control"><button class="ol-zoom-in" type="button" title="Zoom in">+</button><button class="ol-zoom-out" type="button" title="Zoom out">−</button></div>
@@ -638,13 +644,16 @@
 
             </div>
             <div data-silex-type="html" class="editable-style silex-id-1511526522571-7 html-element" data-silex-id="silex-id-1511526522571-7" style="">
-                <div class="silex-element-content">
-                    <p>New HTML box</p>
-                    <canvas id="chart" width="400" height="200"></canvas></div>
+                <div class="silex-element-content"><canvas id="chart" width="1400" height="875"></canvas></div>
             </div>
+
+            <div data-silex-type="image" class="editable-style silex-id-1511530341710-22 image-element" data-silex-id="silex-id-1511530341710-22" style=""><img src="assets/forces.png" class="silex-element-content"></div>
+            <div data-silex-type="image" class="editable-style silex-id-1511530465311-23 image-element" data-silex-id="silex-id-1511530465311-23" style=""><img src="assets/kontur.png" class="silex-element-content"></div>
         </div>
 
     </div>
+
+
 
 
 </body></html>
