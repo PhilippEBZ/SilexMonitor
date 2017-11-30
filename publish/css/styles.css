@@ -28,7 +28,8 @@
         }
         
         .nav-mark:hover {
-            border-bottom: 1px solid #FFFF00;
+            border: 2px solid #FFFF00;
+            color: #FFFFFD;
         }
         
         .nav-mark.page-link-active {
@@ -109,15 +110,15 @@
             background-color: rgba(188, 199, 210, 1);
             top: 0px;
             left: 0px;
-            min-width: 1170px;
+            min-width: 1484px;
         }
         
         .silex-id-1490693608161-2 {
             min-height: 70px;
             background-color: rgba(188, 199, 210, 1);
             top: 15px;
-            left: 100px;
-            width: 1170px;
+            left: 318px;
+            width: 1484px;
         }
         
         .silex-id-1439554966975-57 {
@@ -127,6 +128,7 @@
             box-sizing: content-box;
             min-height: 40px;
             background-color: rgba(81, 87, 92, 1);
+            border-radius: 8px 8px 8px 8px;
         }
         
         .silex-id-1439554966767-55 {
@@ -136,6 +138,7 @@
             box-sizing: content-box;
             min-height: 40px;
             background-color: rgba(81, 87, 92, 1);
+            border-radius: 8px 8px 8px 8px;
         }
         
         .silex-id-1439554967492-62 {
@@ -145,6 +148,7 @@
             box-sizing: content-box;
             min-height: 40px;
             background-color: rgba(81, 87, 92, 1);
+            border-radius: 8px 8px 8px 8px;
         }
         
         .silex-id-1439554967286-60 {
@@ -154,6 +158,7 @@
             box-sizing: content-box;
             min-height: 40px;
             background-color: rgba(81, 87, 92, 1);
+            border-radius: 8px 8px 8px 8px;
         }
         
         .silex-id-1439554966563-53 {
@@ -163,6 +168,7 @@
             box-sizing: content-box;
             min-height: 40px;
             background-color: rgba(81, 87, 92, 1);
+            border-radius: 8px 8px 8px 8px;
         }
         
         .silex-id-1511520712412-5 {
@@ -172,6 +178,7 @@
             box-sizing: content-box;
             min-height: 40px;
             background-color: rgba(81, 87, 92, 1);
+            border-radius: 8px 8px 8px 8px;
         }
         
         .silex-id-1511520841574-6 {
@@ -181,6 +188,14 @@
             box-sizing: content-box;
             min-height: 40px;
             background-color: rgba(81, 87, 92, 1);
+            border-radius: 8px 8px 8px 8px;
+        }
+        
+        .silex-id-1512028387995-2 {
+            width: 278px;
+            min-height: 65px;
+            top: 2px;
+            left: 1200px;
         }
         
         .silex-id-1490693798023-5 {
@@ -487,12 +502,12 @@
         .silex-id-1511526659286-9 {
             background-color: transparent;
             top: 110px;
-            left: 6px;
+            left: 5px;
             min-width: 1920px;
         }
         
         .silex-id-1511526659286-10 {
-            min-height: 1000px;
+            min-height: 1031px;
             background-color: transparent;
             top: 15px;
             left: 100px;
