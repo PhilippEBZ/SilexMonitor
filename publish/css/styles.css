@@ -540,13 +540,6 @@
             border-style: solid;
         }
         
-        .silex-id-1511530465311-23 {
-            width: 480px;
-            min-height: 504px;
-            top: 460px;
-            left: 10px;
-        }
-        
         .silex-id-1511858449392-3 {
             width: 480px;
             background-color: rgba(145, 154, 162, 1);
@@ -568,6 +561,14 @@
             background-color: rgba(145, 154, 162, 1);
             min-height: 140px;
             top: 310px;
+            left: 10px;
+        }
+        
+        .silex-id-1512056636404-3 {
+            width: 480px;
+            background-color: rgb(255, 255, 255);
+            min-height: 504px;
+            top: 460px;
             left: 10px;
         }
     
