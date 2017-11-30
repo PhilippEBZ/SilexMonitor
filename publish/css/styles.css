@@ -28,8 +28,8 @@
         }
         
         .nav-mark:hover {
-            border: 2px solid #FFFF00;
-            color: #FFFFFD;
+            border: 2px solid #1593d7;
+            background-color: #919aa2;
         }
         
         .nav-mark.page-link-active {
@@ -94,6 +94,11 @@
             font-weight: 100;
             text-transform: capitalize;
             line-height: 30px;
+        }
+        
+        .logo-resize:hover {
+            width: 283px;
+            height: 66px;
         }
     
         .silex-id-1439554967896-66 {
@@ -193,9 +198,9 @@
         
         .silex-id-1512028387995-2 {
             width: 278px;
-            min-height: 65px;
             top: 2px;
             left: 1200px;
+            min-height: 65px;
         }
         
         .silex-id-1490693798023-5 {
